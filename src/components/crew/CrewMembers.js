@@ -1,35 +1,34 @@
-import { useState } from "react";
 import {
   Container,
   Content,
   Tabs,
+  H3,
   H1,
   P,
-  Distance,
-  Time,
   Image,
-} from "./Planet.styled";
-import { planets } from "../data/data";
+} from "./CrewMembers.styled";
+import { crewMembers } from "../data/data";
+import { useState } from "react";
 
-const Planet = () => {
-  const [name, setName] = useState("moon");
+const Crew = () => {
+  const [name, setName] = useState("Douglas Hurley");
 
   return (
     <div>
       {name
-        ? planets
-            .filter((planet) => planet.name === name)
-            .map(({ name, img, description, distance, time }, i) => (
+        ? crewMembers
+            .filter((crew) => crew.name === name)
+            .map(({ name, image, role, bio }, i) => (
               <Container key={i}>
-                <Image>
-                  <img src={img} alt="" />
-                </Image>
                 <Content>
+                  <H3>{role}</H3>
+                  <H1> {name} </H1>
+                  <P> {bio} </P>
                   <Tabs>
                     <button
                       className="active"
                       onClick={(e) => {
-                        setName("moon");
+                        setName("Douglas Hurley");
 
                         let moon = e.target;
 
@@ -40,12 +39,10 @@ const Planet = () => {
 
                         moon.classList.add("active");
                       }}
-                    >
-                      Moon
-                    </button>
+                    ></button>
                     <button
                       onClick={(e) => {
-                        setName("mars");
+                        setName("Mark Shuttleworth");
                         let mars = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -55,13 +52,11 @@ const Planet = () => {
 
                         mars.classList.add("active");
                       }}
-                    >
-                      Mars
-                    </button>
+                    ></button>
 
                     <button
                       onClick={(e) => {
-                        setName("europa");
+                        setName("Victor Glover");
                         let europa = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -71,13 +66,11 @@ const Planet = () => {
 
                         europa.classList.add("active");
                       }}
-                    >
-                      Europa
-                    </button>
+                    ></button>
 
                     <button
                       onClick={(e) => {
-                        setName("titan");
+                        setName("Anousheh Ansari");
                         let titan = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -87,24 +80,12 @@ const Planet = () => {
 
                         titan.classList.add("active");
                       }}
-                    >
-                      Titan
-                    </button>
+                    ></button>
                   </Tabs>
-                  <H1> {name} </H1>
-                  <P>{description}</P>
-                  <hr />
-                  <div className="footer_content">
-                    <Distance>
-                      <p>AVG. DISTANCE</p>
-                      <span>{distance}</span>
-                    </Distance>
-                    <Time>
-                      <p>Est. travel time</p>
-                      <span>{time}</span>
-                    </Time>
-                  </div>
                 </Content>
+                <Image>
+                  <img src={image} alt="" />
+                </Image>
               </Container>
             ))
         : "Error!!!"}
@@ -112,4 +93,4 @@ const Planet = () => {
   );
 };
 
-export default Planet;
+export default Crew;

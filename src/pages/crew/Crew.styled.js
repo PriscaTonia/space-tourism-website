@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-export const StyledDest = styled.div`
-  background: var(--dest-desktop-bg-image);
+export const StyledCrew = styled.div`
+  background: var(--crew-desktop-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
 
   @media (min-width: 768px) and (max-width: 900px) {
-    background: var(--dest-tablet-bg-image);
+    background: var(--crew-tablet-bg-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   @media (max-width: 767px) {
-    background: var(--dest-mobile-bg-image);
+    background: var(--crew-mobile-bg-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@ export const Container = styled.div`
   padding-top: 40px;
   margin: 0px auto;
 
-  @media (max-width: 900px) {
+  @media (min-width: 768px) and (max-width: 900px) {
     padding-top: 0px;
   }
 
@@ -36,13 +36,13 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  padding: 76px 0px 64px 166.5px;
+  padding: 62px 165px 0px 166.5px;
   @media (max-width: 1100px) {
-    padding: 40px 0px 62px 38.5px;
+    padding: 40px 0px 0px 38.5px;
   }
 
   @media (max-width: 767px) {
-    padding: 24px 24px 58px 24px;
+    padding: 24px 24px 104px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;

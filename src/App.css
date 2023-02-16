@@ -14,4 +14,8 @@
   --dest-desktop-bg-image: url("./assets/destination/background-destination-desktop.jpg");
   --dest-tablet-bg-image: url("./assets/destination/background-destination-tablet.jpg");
   --dest-mobile-bg-image: url("./assets/destination/background-destination-mobile.jpg");
+
+  --crew-desktop-bg-image: url("./assets/crew/background-crew-desktop.jpg");
+  --crew-tablet-bg-image: url("./assets/crew/background-crew-tablet.jpg");
+  --crew-mobile-bg-image: url("./assets/crew/background-crew-mobile.jpg");
 }

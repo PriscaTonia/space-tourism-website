@@ -38,19 +38,9 @@ export const Container = styled.div`
 export const Main = styled.main`
   display: flex;
   justify-content: space-between;
-  gap: 368px;
   padding: 251px 165px 131px 165px;
 
-  @media (max-width: 1264px) {
-    gap: 250px;
-  }
-  @media (max-width: 1200px) {
-    gap: 150px;
-  }
-  @media (max-width: 1110px) {
-    gap: 100px;
-  }
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     gap: 156px;
     justify-content: center;
@@ -66,9 +56,11 @@ export const Main = styled.main`
 export const MainContent = styled.section`
   display: flex;
   flex-direction: column;
+  max-width: 450px;
   p {
     font-style: normal;
     font-weight: 400;
+    /* width: fit-content; */
   }
   .first_text {
     font-family: var(--barlow-condensed-font-family);
@@ -90,7 +82,7 @@ export const MainContent = styled.section`
     line-height: 32px;
     color: var(--light-blue);
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     align-items: center;
     .first_text {
       font-size: 20px;
@@ -146,7 +138,7 @@ export const MainDiagram = styled.div`
     color: var(--dark-blue);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     align-self: center;
     width: 242px;
     height: 242px;
