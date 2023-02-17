@@ -18,4 +18,8 @@
   --crew-desktop-bg-image: url("./assets/crew/background-crew-desktop.jpg");
   --crew-tablet-bg-image: url("./assets/crew/background-crew-tablet.jpg");
   --crew-mobile-bg-image: url("./assets/crew/background-crew-mobile.jpg");
+
+  --tech-desktop-bg-image: url("./assets/technology/background-technology-desktop.jpg");
+  --tech-tablet-bg-image: url("./assets/technology/background-technology-tablet.jpg");
+  --tech-mobile-bg-image: url("./assets/technology/background-technology-mobile.jpg");
 }

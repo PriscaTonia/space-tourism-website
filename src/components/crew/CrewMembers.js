@@ -11,24 +11,27 @@ import { crewMembers } from "../data/data";
 import { useState } from "react";
 
 const Crew = () => {
-  const [name, setName] = useState("Douglas Hurley");
+  const [name, setName] = useState("Douglas");
 
   return (
     <div>
       {name
         ? crewMembers
             .filter((crew) => crew.name === name)
-            .map(({ name, image, role, bio }, i) => (
+            .map(({ name, Lname, image, role, bio }, i) => (
               <Container key={i}>
                 <Content>
                   <H3>{role}</H3>
-                  <H1> {name} </H1>
+                  <div className="header_name">
+                    <H1> {name} </H1>
+                    <H1> {Lname} </H1>
+                  </div>
                   <P> {bio} </P>
                   <Tabs>
                     <button
                       className="active"
                       onClick={(e) => {
-                        setName("Douglas Hurley");
+                        setName("Douglas");
 
                         let moon = e.target;
 
@@ -42,7 +45,7 @@ const Crew = () => {
                     ></button>
                     <button
                       onClick={(e) => {
-                        setName("Mark Shuttleworth");
+                        setName("Mark");
                         let mars = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -56,7 +59,7 @@ const Crew = () => {
 
                     <button
                       onClick={(e) => {
-                        setName("Victor Glover");
+                        setName("Victor");
                         let europa = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -70,7 +73,7 @@ const Crew = () => {
 
                     <button
                       onClick={(e) => {
-                        setName("Anousheh Ansari");
+                        setName("Anousheh");
                         let titan = e.target;
 
                         const btns = e.target.parentElement.childNodes;
@@ -84,7 +87,7 @@ const Crew = () => {
                   </Tabs>
                 </Content>
                 <Image>
-                  <img src={image} alt="" />
+                  <img src={image} alt="" className={name} />
                 </Image>
               </Container>
             ))

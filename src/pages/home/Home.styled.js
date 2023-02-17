@@ -5,7 +5,7 @@ export const StyledHome = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
     background: var(--home-tablet-bg-image);

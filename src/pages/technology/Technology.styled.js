@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-export const StyledDest = styled.div`
-  background: var(--dest-desktop-bg-image);
+export const StyledTechnology = styled.div`
+  background: var(--tech-desktop-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
-    background: var(--dest-tablet-bg-image);
+    background: var(--tech-tablet-bg-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   @media (max-width: 767px) {
-    background: var(--dest-mobile-bg-image);
+    background: var(--tech-mobile-bg-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@ export const Container = styled.div`
   padding-top: 40px;
   margin: 0px auto;
 
-  @media (max-width: 900px) {
+  @media (min-width: 768px) and (max-width: 900px) {
     padding-top: 0px;
   }
 
@@ -36,13 +36,13 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  padding: 76px 0px 64px 166.5px;
+  padding: 76px 0px 101px 166.5px;
   @media (max-width: 1100px) {
-    padding: 40px 0px 62px 38.5px;
+    padding: 40px 0px 97px 0px;
   }
 
   @media (max-width: 767px) {
-    padding: 24px 24px 58px 24px;
+    padding: 24px 0px 81px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +69,7 @@ export const H2 = styled.h2`
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.375px;
+    padding-left: 38.5px;
   }
 
   @media (max-width: 767px) {

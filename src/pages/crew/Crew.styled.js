@@ -5,7 +5,7 @@ export const StyledCrew = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
     background: var(--crew-tablet-bg-image);
@@ -36,13 +36,13 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  padding: 62px 165px 0px 166.5px;
+  padding: 76px 165px 0px 166.5px;
   @media (max-width: 1100px) {
     padding: 40px 0px 0px 38.5px;
   }
 
   @media (max-width: 767px) {
-    padding: 24px 24px 104px 24px;
+    padding: 24px 24px 54px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@ export const H2 = styled.h2`
     opacity: 0.25;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.375px;
