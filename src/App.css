@@ -23,3 +23,7 @@
   --tech-tablet-bg-image: url("./assets/technology/background-technology-tablet.jpg");
   --tech-mobile-bg-image: url("./assets/technology/background-technology-mobile.jpg");
 }
+
+.App {
+  background: #0b0d19;
+}

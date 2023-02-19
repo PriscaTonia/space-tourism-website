@@ -20,7 +20,11 @@ const Navbar = () => {
   ];
 
   return (
-    <StyledNav>
+    <StyledNav
+      initial={{ y: -200 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
+    >
       <Link to="/">
         <Logo />
       </Link>
@@ -30,7 +34,7 @@ const Navbar = () => {
           {navLinks.map(({ title, to, className }, i) => (
             <NavLink
               to={`/${to}`}
-              // onClick={showNavBar}
+              onClick={showNavBar}
               className={({ isActive }) =>
                 isActive ? `${className} activeClassName` : className
               }

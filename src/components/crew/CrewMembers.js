@@ -19,7 +19,12 @@ const Crew = () => {
         ? crewMembers
             .filter((crew) => crew.name === name)
             .map(({ name, Lname, image, role, bio }, i) => (
-              <Container key={i}>
+              <Container
+                key={i}
+                initial={{ x: "100vw" }}
+                animate={{ x: 0 }}
+                transition={{ delay: 1, type: "spring", stiffness: 70 }}
+              >
                 <Content>
                   <H3>{role}</H3>
                   <div className="header_name">

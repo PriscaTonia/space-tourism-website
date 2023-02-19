@@ -11,7 +11,12 @@ const Tech = () => {
         ? technology
             .filter((planet) => planet.name === name)
             .map(({ name, landscape, portrait, description }, i) => (
-              <Container key={i}>
+              <Container
+                key={i}
+                initial={{ x: "100vw" }}
+                animate={{ x: 0 }}
+                transition={{ delay: 1, type: "spring", stiffness: 70 }}
+              >
                 <Content>
                   <Tabs>
                     <button

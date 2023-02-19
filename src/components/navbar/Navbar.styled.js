@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledNav = styled.div`
+export const StyledNav = styled(motion.div)`
+  position: fixed;
   width: 96%;
   height: 96px;
   padding: 39px 0px;
   display: flex;
   flex-direction: row;
+  z-index: 1000;
+  overflow: hidden;
+  top: 40px;
   gap: 64px;
   justify-content: space-between;
   align-items: center;
@@ -29,14 +34,15 @@ export const StyledNav = styled.div`
     color: #ffffff;
   }
 
-  @media (min-width: 768px) and (max-width: 900px) {
-    /* background: pink; */
+  @media (min-width: 768px) and (max-width: 1100px) {
+    top: 0px;
   }
 
   @media (max-width: 767px) {
     width: 100%;
     padding: 39px 24px;
     margin-left: 0px;
+    top: 0px;
     .nav-btn {
       display: block;
       opacity: 1;
@@ -122,7 +128,11 @@ export const Nav = styled.nav`
     text-decoration: none;
     letter-spacing: 2.7px;
     color: var(--white);
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    }
   }
+
   .activeClassName {
     border-bottom: 3px solid var(--white);
   }

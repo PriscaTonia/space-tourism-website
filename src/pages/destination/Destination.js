@@ -4,9 +4,13 @@ import { StyledDest, Container, Main, H2 } from "./Destination.styled";
 
 const Destination = () => {
   return (
-    <StyledDest>
+    <StyledDest
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
       <Container>
-        <Navbar />
+        {/* <Navbar /> */}
         <Main>
           <H2>
             {" "}

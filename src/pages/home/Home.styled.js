@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledHome = styled.div`
+export const StyledHome = styled(motion.div)`
   background: var(--home-desktop-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: auto;
+  overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 900px) {
     background: var(--home-tablet-bg-image);
@@ -23,22 +25,19 @@ export const StyledHome = styled.div`
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding-top: 40px;
   margin: 0px auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
-    padding-top: 0px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 24px;
   }
 `;
 
-export const Main = styled.main`
+export const Main = styled(motion.main)`
   display: flex;
   justify-content: space-between;
-  padding: 251px 165px 131px 165px;
+  padding: 387px 165px 131px 165px;
 
   @media (max-width: 1100px) {
     flex-direction: column;
@@ -49,7 +48,7 @@ export const Main = styled.main`
   }
   @media (max-width: 767px) {
     gap: 81px;
-    padding: 58px 24px 48px;
+    padding: 112px 24px 48px;
   }
 `;
 
@@ -117,8 +116,10 @@ export const MainContent = styled.section`
   }
 `;
 
-export const MainDiagram = styled.div`
+export const MainDiagram = styled.button`
   border-radius: 50%;
+  outline: none;
+  border: none;
   align-self: flex-end;
   width: 274px;
   height: 274px;
@@ -127,7 +128,11 @@ export const MainDiagram = styled.div`
   justify-content: center;
   align-items: center;
   background: var(--white);
+  cursor: pointer;
 
+  &:hover {
+    box-shadow: 0px 0px 2px 88px rgba(255, 255, 255, 0.1);
+  }
   p {
     font-family: var(--bellfair-font-family);
     font-style: normal;

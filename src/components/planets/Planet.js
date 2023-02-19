@@ -10,6 +10,7 @@ import {
   Image,
 } from "./Planet.styled";
 import { planets } from "../data/data";
+import { motion } from "framer-motion";
 
 const Planet = () => {
   const [name, setName] = useState("moon");
@@ -20,7 +21,12 @@ const Planet = () => {
         ? planets
             .filter((planet) => planet.name === name)
             .map(({ name, img, description, distance, time }, i) => (
-              <Container key={i}>
+              <Container
+                key={i}
+                initial={{ x: "100vw" }}
+                animate={{ x: 0 }}
+                transition={{ delay: 1, type: "spring", stiffness: 70 }}
+              >
                 <Image>
                   <img src={img} alt="" />
                 </Image>
@@ -94,7 +100,7 @@ const Planet = () => {
                   <H1> {name} </H1>
                   <P>{description}</P>
                   <hr />
-                  <div className="footer_content">
+                  <motion.div className="footer_content">
                     <Distance>
                       <p>AVG. DISTANCE</p>
                       <span>{distance}</span>
@@ -103,7 +109,7 @@ const Planet = () => {
                       <p>Est. travel time</p>
                       <span>{time}</span>
                     </Time>
-                  </div>
+                  </motion.div>
                 </Content>
               </Container>
             ))

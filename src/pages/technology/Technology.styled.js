@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledTechnology = styled.div`
+export const StyledTechnology = styled(motion.div)`
   background: var(--tech-desktop-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: auto;
+  overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 900px) {
     background: var(--tech-tablet-bg-image);
@@ -23,26 +25,23 @@ export const StyledTechnology = styled.div`
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding-top: 40px;
   margin: 0px auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
-    padding-top: 0px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 24px;
   }
 `;
 
 export const Main = styled.main`
-  padding: 76px 0px 101px 166.5px;
+  padding: 212px 0px 101px 166.5px;
   @media (max-width: 1100px) {
-    padding: 40px 0px 97px 0px;
+    padding: 136px 0px 97px 0px;
   }
 
   @media (max-width: 767px) {
-    padding: 24px 0px 81px 0px;
+    padding: 88px 0px 81px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;

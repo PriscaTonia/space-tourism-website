@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   padding: 64px 163px 118px 63.5px;
   display: flex;
   gap: 50px;
@@ -115,6 +116,10 @@ export const Tabs = styled.div`
     padding-bottom: 12px;
     cursor: pointer;
     color: var(--light-blue);
+
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    }
   }
 
   .active {
@@ -139,7 +144,7 @@ export const Tabs = styled.div`
   }
 `;
 
-export const H1 = styled.h1`
+export const H1 = styled(motion.h1)`
   font-family: var(--bellfair-font-family);
   font-style: normal;
   text-transform: uppercase;
@@ -161,7 +166,7 @@ export const H1 = styled.h1`
   }
 `;
 
-export const P = styled.p`
+export const P = styled(motion.p)`
   font-family: var(--barlow-font-family);
   font-style: normal;
   font-weight: 400;
@@ -208,7 +213,7 @@ export const Time = styled.div`
   }
 `;
 
-export const Image = styled.div`
+export const Image = styled(motion.div)`
   display: flex;
   align-items: flex-end;
   @media (max-width: 1100px) {

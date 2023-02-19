@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   width: 100%;
   padding: 26px 0px 0px 0px;
   display: flex;
@@ -73,10 +74,7 @@ export const Tabs = styled.div`
     height: 80px;
     border-radius: 50%;
     outline: none;
-    border: none;
-    mix-blend-mode: normal;
-    opacity: 0.25;
-    border: 1px solid var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     background: transparent;
     font-family: var(--bellfair-font-family);
     font-style: normal;
@@ -87,6 +85,10 @@ export const Tabs = styled.div`
     letter-spacing: 2px;
     color: var(--white);
     cursor: pointer;
+
+    &:hover {
+      border: 1px solid #ffffff;
+    }
   }
 
   .active {

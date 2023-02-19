@@ -4,9 +4,13 @@ import Tech from "../../components/tech/Tech";
 
 const Technology = () => {
   return (
-    <StyledTechnology>
+    <StyledTechnology
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
       <Container>
-        <Navbar />
+        {/* <Navbar /> */}
         <Main>
           <H2>
             {" "}

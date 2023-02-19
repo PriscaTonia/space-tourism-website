@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -50,6 +51,12 @@ export const Tabs = styled.div`
     mix-blend-mode: normal;
     opacity: 0.17;
     cursor: pointer;
+
+    &:hover {
+      background: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
   }
 
   .active {

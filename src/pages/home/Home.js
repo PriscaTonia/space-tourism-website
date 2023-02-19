@@ -6,13 +6,22 @@ import {
   MainContent,
   MainDiagram,
 } from "./Home.styled";
+// import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <StyledHome>
+    <StyledHome
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
       <Container>
-        <Navbar />
-        <Main>
+        {/* <Navbar /> */}
+        <Main
+          initial={{ y: "100vh" }}
+          animate={{ y: 0 }}
+          transition={{ delay: 1, type: "spring", stiffness: 70 }}
+        >
           <MainContent>
             <p className="first_text">SO, YOU WANT TO TRAVEL TO</p>
             <p className="second_text">SPACE</p>
@@ -23,6 +32,7 @@ const Home = () => {
               this world experience!
             </p>
           </MainContent>
+          <div className="btn_hover"></div>
           <MainDiagram>
             <p>EXPLORE</p>
           </MainDiagram>

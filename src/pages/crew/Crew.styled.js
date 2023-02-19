@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledCrew = styled.div`
+export const StyledCrew = styled(motion.div)`
   background: var(--crew-desktop-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: auto;
+  overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 900px) {
     background: var(--crew-tablet-bg-image);
@@ -23,26 +25,23 @@ export const StyledCrew = styled.div`
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding-top: 40px;
   margin: 0px auto;
 
   @media (min-width: 768px) and (max-width: 900px) {
-    padding-top: 0px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 24px;
   }
 `;
 
 export const Main = styled.main`
-  padding: 76px 165px 0px 166.5px;
+  padding: 212px 165px 0px 166.5px;
   @media (max-width: 1100px) {
-    padding: 40px 0px 0px 38.5px;
+    padding: 136px 0px 0px 38.5px;
   }
 
   @media (max-width: 767px) {
-    padding: 24px 24px 54px 24px;
+    padding: 88px 24px 54px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
