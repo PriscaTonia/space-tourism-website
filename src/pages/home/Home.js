@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar/Navbar";
 import {
   StyledHome,
   Container,
@@ -33,9 +32,7 @@ const Home = () => {
             </p>
           </MainContent>
           <div className="btn_hover"></div>
-          <MainDiagram>
-            <p>EXPLORE</p>
-          </MainDiagram>
+          <MainDiagram>EXPLORE</MainDiagram>
         </Main>
       </Container>
     </StyledHome>

@@ -6,7 +6,7 @@ export const StyledTechnology = styled(motion.div)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: auto;
+  min-height: 100vh;
   overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 900px) {
@@ -75,5 +75,6 @@ export const H2 = styled.h2`
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
+    padding-left: 0px;
   }
 `;

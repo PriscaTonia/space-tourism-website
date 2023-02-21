@@ -6,7 +6,7 @@ export const StyledHome = styled(motion.div)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: auto;
+  min-height: 100vh;
   overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 900px) {
@@ -52,7 +52,7 @@ export const Main = styled(motion.main)`
   }
 `;
 
-export const MainContent = styled.section`
+export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 450px;
@@ -128,19 +128,17 @@ export const MainDiagram = styled.button`
   justify-content: center;
   align-items: center;
   background: var(--white);
+  font-family: var(--bellfair-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 2px;
+  color: var(--dark-blue);
   cursor: pointer;
 
   &:hover {
     box-shadow: 0px 0px 2px 88px rgba(255, 255, 255, 0.1);
-  }
-  p {
-    font-family: var(--bellfair-font-family);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 37px;
-    letter-spacing: 2px;
-    color: var(--dark-blue);
   }
 
   @media (max-width: 1100px) {
@@ -152,12 +150,9 @@ export const MainDiagram = styled.button`
     width: 150px;
     height: 150px;
     padding: 68px 29.5px 59px;
-
-    p {
-      font-size: 20px;
-      line-height: 23px;
-      text-align: center;
-      letter-spacing: 1.25px;
-    }
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 1.25px;
   }
 `;
