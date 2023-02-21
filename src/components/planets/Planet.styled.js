@@ -77,7 +77,8 @@ export const Content = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
-    max-width: 90vw;
+    max-width: 327px;
+
     hr {
       /* min-width: 327px; */
       max-width: 100%;

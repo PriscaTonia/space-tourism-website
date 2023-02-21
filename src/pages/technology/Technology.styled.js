@@ -75,5 +75,6 @@ export const H2 = styled.h2`
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
+    padding-left: 0px;
   }
 `;

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 export const StyledNav = styled(motion.div)`
   position: fixed;
   width: 96%;
+  margin-left: 4%;
+  max-width: 1440px;
   height: 96px;
   padding: 39px 0px;
   display: flex;
@@ -14,7 +16,10 @@ export const StyledNav = styled(motion.div)`
   gap: 64px;
   justify-content: space-between;
   align-items: center;
-  margin-left: 4%;
+  .logo {
+    min-width: 48px;
+    height: 48px;
+  }
 
   .nav-btn {
     border: none;
@@ -34,6 +39,10 @@ export const StyledNav = styled(motion.div)`
     color: #ffffff;
   }
 
+  @media (min-width: 1440px) {
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
   @media (min-width: 768px) and (max-width: 1100px) {
     top: 0px;
   }
@@ -97,31 +106,15 @@ export const Nav = styled.nav`
   flex-direction: row;
   gap: 48px;
 
-  .home::before {
-    content: "00";
-    margin-right: 12px;
-    font-weight: bold;
-  }
-  .dest::before {
-    content: "01";
-    margin-right: 12px;
-    font-weight: bold;
-  }
-  .crew::before {
-    content: "02";
-    margin-right: 12px;
-    font-weight: bold;
-  }
-  .tech::before {
-    content: "03";
-    margin-right: 12px;
-    font-weight: bold;
-  }
-
   a {
+    span {
+      margin-right: 12px;
+      font-weight: 700;
+    }
     font-family: var(--barlow-condensed-font-family);
     font-style: normal;
     font-weight: 400;
+    text-transform: uppercase;
     font-size: 16px;
     line-height: 19px;
     padding-bottom: 54px;
@@ -139,17 +132,14 @@ export const Nav = styled.nav`
 
   @media (min-width: 768px) and (max-width: 900px) {
     gap: 37px;
-    .home::before,
-    .dest::before,
-    .crew::before,
-    .tech::before {
-      /* content: ""; */
-      display: none;
-    }
+
     a {
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 2.3625px;
+      span {
+        display: none;
+      }
     }
   }
 
