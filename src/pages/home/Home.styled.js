@@ -38,6 +38,16 @@ export const Main = styled(motion.main)`
   display: flex;
   justify-content: space-between;
   padding: 387px 165px 131px 165px;
+  a {
+    text-decoration: none;
+    font-family: var(--bellfair-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    color: var(--dark-blue);
+  }
 
   @media (max-width: 1100px) {
     flex-direction: column;

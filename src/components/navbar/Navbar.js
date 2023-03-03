@@ -25,7 +25,9 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
     >
-      <Logo className="logo" />
+      <a href="/">
+        <Logo className="logo" />
+      </a>
       <Line></Line>
       <NavCont ref={navRef}>
         <Nav>

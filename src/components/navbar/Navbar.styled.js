@@ -12,7 +12,7 @@ export const StyledNav = styled(motion.div)`
   flex-direction: row;
   z-index: 1000;
   overflow: hidden;
-  top: 40px;
+  /* top: 40px; */
   gap: 64px;
   justify-content: space-between;
   align-items: center;

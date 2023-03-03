@@ -31,8 +31,9 @@ const Home = () => {
               this world experience!
             </p>
           </MainContent>
-          <div className="btn_hover"></div>
-          <MainDiagram>EXPLORE</MainDiagram>
+          <a href="/dest">
+            <MainDiagram>EXPLORE</MainDiagram>
+          </a>
         </Main>
       </Container>
     </StyledHome>
